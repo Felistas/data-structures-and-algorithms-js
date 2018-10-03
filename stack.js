@@ -4,9 +4,9 @@ class Stack {
         this.items =[];
     }
 
-    push(val){
+    push(...val){
         //only add new items at the top of the stack or end of the array
-        this.items.push(val);
+        this.items.push(...val);
     }
     pop(){
         //we use the pop method in an array since it removes the last item added in that array
@@ -26,4 +26,25 @@ class Stack {
         //returns the size of the stack
         return this.items.length;
     }
+    isEmpty(){
+        if (this.items.length > 0 ){
+            return console.log("Stack is not empty");
+        }
+        else {
+            return console.log("Stack is empty");
+        }
+    }
 }
+
+const stack = new Stack();
+stack.push(6,8,9);
+stack.push(7);
+stack.peek();
+stack.push(11);
+stack.push(13);
+console.log(stack, "Stack");
+console.log(stack.peek(), "peek");
+console.log(stack.size(), "size");
+console.log(stack.isEmpty(), "isEmpty");
+console.log(stack.pop(), "pop");
+console.log(stack.size(), "size");
