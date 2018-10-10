@@ -36,6 +36,8 @@ class Stack {
     }
 }
 
+//complexity used is 0(1) because we can access the element we want in the object and perform any operation to it.
+
 const stack = new Stack();
 stack.push(6,8,9);
 stack.push(7);
