@@ -3,10 +3,14 @@ class Stack {
         this.count = 0;
         this.items = {};
     }
+
+    //add an item to the stack
     push(val){
         this.items[this.count] = val;
         this.count++;
     }
+
+    //check if the stack is empty or not
     isEmpty(){
         if (this.count === 0) {
             return false;
@@ -15,11 +19,15 @@ class Stack {
             return console.log("Object not empty");
         }
     }
+
+    //get the size of the stack
     size(){
         return console.log(this.count);
     }
+
+    //remove an item from the stack
     pop(){
-        if (this.count === 0){
+        if (this.isEmpty){
             return undefined;
         }
         else{
@@ -28,8 +36,10 @@ class Stack {
             return this.items;
         }
     }
+
+    //return the first item in the stack
     peek(){
-        if (this.count === 0 ){
+        if (this.isEmpty){
             return undefined;
         }
         else{
@@ -37,6 +47,8 @@ class Stack {
             return this.items[this.count];
         }
     }
+
+    //remove all the elements from the stack
     clear(){
         this.count = 0;
         return this.items = {};
@@ -49,7 +61,7 @@ class Stack {
 const stack = new Stack();
 stack.push(7);
 stack.push(8);
-stack.push(9);
+stack.clear();
 
 console.log(stack.peek(),"stack");
 console.log(stack.clear(),"stack cleared");
