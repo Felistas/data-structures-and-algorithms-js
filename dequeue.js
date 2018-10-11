@@ -57,7 +57,6 @@ class Dequeue {
         const values = Object.values(this.items);
         for (var i=0; i<values.length-1; i++){
                 this.items[i]=values[i];
-                //fix bug
         }
         return this.items
     }
