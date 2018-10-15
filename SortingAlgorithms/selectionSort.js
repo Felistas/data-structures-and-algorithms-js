@@ -1,3 +1,7 @@
+/*
+Selection sort algorithm loops through a given array, picking the minimum element
+per iteration then adds it to a sorted array. The sorted array is then returned.
+*/
 function selectionSort(arr){
     let sortedArray = [];
     for (var i=arr.length; i>0; i--){
