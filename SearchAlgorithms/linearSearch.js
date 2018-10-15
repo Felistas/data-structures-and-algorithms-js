@@ -1,7 +1,7 @@
 /*
 loop through each element in the given array
 and return the index of num once you find it 
-in the array
+in the array. Complexity in 0(n)
 */
 function linearSearch(arr, num){
     for (var i=0; i<=arr.length; i++){
